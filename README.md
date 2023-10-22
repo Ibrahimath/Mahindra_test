@@ -27,7 +27,7 @@ Although, the project is incomplete. It contains the following:
 7. Middlewares on the backend to check for user and admin authorization
 
 It also contains some interesting rough work commented out like:
-An endPoint that allows user to signUp with credentials including password.
-A login option with credentials.
+1.    An endPoint that allows user to signUp with credentials including password.
+2.    A login option with credentials.
 And more...
 
