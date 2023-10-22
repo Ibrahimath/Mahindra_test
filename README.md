@@ -12,7 +12,7 @@ To run this app, complete the following steps:
     d.) npm run dev.
     Without a database connection, you will get an error while running some of these.
     
-Once coonection is established, you are up on running.
+Once connection is established, you are up on running.
 
 # Contents
 
