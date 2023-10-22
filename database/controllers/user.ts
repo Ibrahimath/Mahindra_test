@@ -7,6 +7,51 @@ import { db } from "../models";
 const { hashPassword, comparePassword } = require("../utils/helpers");
 import { validateRegister, validateEvent } from "../validations";
 
+
+// const register = async (req:any, res:any) => {
+//   try {
+//     const validateData = validateRegister(req.body);
+//     if (validateData.error) {
+//       res.status(400);
+
+//       throw new Error(validateData.error.details[0].message);
+//     }
+//     const { email, fullName, password } = req.body;
+//     //check if the user already exists
+//     const user = await db.User.findOne({
+//       where: { email },
+//     });
+//     if (user) {
+//       throw new Error("User already exists");
+//     }
+//     let isAdmin;
+//     email.indexOf("@mahindra.com") !== -1 ? (isAdmin = true) : false;
+//     const { hash, salt } = await hashPassword(password);
+//     const newUser = await db.User.create({
+//       user_id: uuidv4(),
+//       fullName,
+//       email,
+//       isAdmin: isAdmin,
+//       passwordHash: hash,
+//       passwordSalt: salt,
+//     });
+//     delete newUser.dataValues.user_id;
+//     delete newUser.dataValues.passwordHash;
+//     delete newUser.dataValues.passwordSalt;
+//     res.status(201).json({
+//       status: true,
+//       message: "User created successfully",
+//       data: newUser.dataValues,
+//     });
+//   } catch (err:any) {
+//     res.status(401).json({
+//       status: false,
+//       message: err?.message || "Something went wrong",
+//     });
+//   }
+// };
+
+
 const signin = async (req: any, res: any) => {
   const { email, account_id, fullName } = req.body;
   try {
